@@ -65,7 +65,9 @@ function loadProjectCover(img) {
   if (!site) return;
 
   const cover = img.closest('.project-card__cover');
-  const localSrc = img.dataset.local;
+  const localSrc = img.dataset.local
+    ? `${import.meta.env.BASE_URL}${img.dataset.local}`
+    : null;
   const remoteSrc = mshotsUrl(site);
 
   const markLoaded = () => cover?.classList.add('has-cover');
