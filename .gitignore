@@ -1,0 +1,9 @@
+node_modules
+dist
+html-export
+portfolio-html.zip
+.DS_Store
+*.local
+.env
+.env.*
+!.env.example

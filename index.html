@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0f0c" />
+    <meta
+      name="description"
+      content="Gabriela Sacher — Desarrollo web, WordPress, e-commerce y automatización con IA. Proyectos publicados y en línea."
+    />
+    <meta name="keywords" content="freelance, desarrolladora web, WordPress, automatización IA, e-commerce, Gabriela Sacher" />
+    <meta name="author" content="Gabriela Sacher" />
+    <meta property="og:title" content="Gabriela Sacher — Sitios web y automatización con IA" />
+    <meta
+      property="og:description"
+      content="WordPress, tiendas online y herramientas con IA en producción. Disponible para nuevos proyectos freelance."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/profile.png" />
+    <title>Gabriela Sacher — Desarrollo Web y Automatización con IA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
+    <header class="header" id="header">
+      <nav class="nav container" aria-label="Principal">
+        <a href="#inicio" class="nav__logo">Gasacher<span class="nav__logo-dot">.</span></a>
+        <button
+          class="nav__toggle"
+          id="nav-toggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav__menu" id="nav-menu">
+          <li><a href="#inicio" class="nav__link">Inicio</a></li>
+          <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
+          <li><a href="#servicios" class="nav__link">Servicios</a></li>
+          <li><a href="#proyectos" class="nav__link">Proyectos</a></li>
+          <li><a href="#habilidades" class="nav__link">Habilidades</a></li>
+          <li><a href="#contacto" class="nav__link nav__link--cta">Contactar</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="contenido-principal">
+      <!-- HERO -->
+      <section class="hero" id="inicio">
+        <div class="hero__bg"></div>
+        <div class="container hero__content">
+          <div class="hero__grid">
+            <div class="hero__text">
+              <div class="hero__badge">
+                <span class="hero__status" aria-hidden="true"></span>
+                Disponible para nuevos proyectos
+              </div>
+              <h1 class="hero__title">
+                Sitios que <span class="text-gradient">funcionan</span>.<br />
+                Herramientas que <span class="text-gradient">ahorran tiempo</span>.
+              </h1>
+              <p class="hero__subtitle">
+                Soy <strong>Gabriela Sacher</strong>, desarrolladora web freelance.
+                Con HTML, React, PHP y WordPress hago sitios y tiendas online;
+                con IA, herramientas que sacan el trabajo repetitivo de encima.
+              </p>
+              <div class="hero__actions">
+                <a href="#contacto" class="btn btn--primary">Hablemos de tu proyecto</a>
+                <a href="#proyectos" class="btn btn--outline">Ver proyectos</a>
+              </div>
+              <div class="hero__stats">
+                <div class="hero__stat">
+                  <span class="hero__stat-number">7</span>
+                  <span class="hero__stat-label">Proyectos publicados</span>
+                </div>
+                <div class="hero__stat">
+                  <span class="hero__stat-number">4</span>
+                  <span class="hero__stat-label">Clientes reales</span>
+                </div>
+                <div class="hero__stat">
+                  <span class="hero__stat-number">24h</span>
+                  <span class="hero__stat-label">Tiempo de respuesta</span>
+                </div>
+              </div>
+            </div>
+            <div class="hero__photo-wrap">
+              <div class="hero__photo-glow" aria-hidden="true"></div>
+              <img
+                src="/images/profile.png"
+                alt="Gabriela Sacher"
+                class="hero__photo"
+                width="360"
+                height="420"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONFIANZA -->
+      <section class="trust-bar">
+        <div class="container trust-bar__grid">
+          <div class="trust-bar__item">
+            <span class="trust-bar__icon" aria-hidden="true">🔗</span>
+            <p><strong>Proyectos verificables</strong> — cada trabajo tiene enlace en vivo</p>
+          </div>
+          <div class="trust-bar__item">
+            <span class="trust-bar__icon" aria-hidden="true">🤖</span>
+            <p><strong>IA en producción</strong> — herramienta activa desde diciembre de 2025</p>
+          </div>
+          <div class="trust-bar__item">
+            <span class="trust-bar__icon" aria-hidden="true">🇦🇷</span>
+            <p><strong>Remoto desde Argentina</strong> — para marcas y pymes de habla hispana</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOBRE MÍ -->
+      <section class="section about" id="sobre-mi">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__tag">Sobre mí</span>
+            <h2 class="section__title">Desarrollo web que ya está en línea</h2>
+          </div>
+          <div class="about__grid">
+            <div class="about__image">
+              <div class="about__avatar">
+                <img
+                  src="/images/profile.png"
+                  alt="Gabriela Sacher — desarrolladora web freelance"
+                  class="about__avatar-img"
+                  width="260"
+                  height="325"
+                />
+              </div>
+              <div class="about__card">
+                <span class="about__card-icon">📍</span>
+                <div>
+                  <strong>Ubicación</strong>
+                  <p>Argentina / Remoto</p>
+                </div>
+              </div>
+            </div>
+            <div class="about__text">
+              <p>
+                Me especializo en sitios y herramientas que terminan publicados
+                y en uso: desde mi propia tienda online hasta un agente de IA que
+                genera reportes mensuales de redes sociales.
+              </p>
+              <p>
+                Ofrezco <strong>desarrollo web freelance</strong> en WordPress,
+                e-commerce, landings de marca y automatizaciones. Trabajo por etapas,
+                con presupuesto acordado desde el inicio.
+              </p>
+              <p>
+                También soy <strong>cofundadora de <a href="https://gasacher.github.io/hilo/" target="_blank" rel="noopener">Hilo</a></strong>,
+                un estudio de automatización e IA en desarrollo con mi socio.
+              </p>
+              <ul class="about__highlights">
+                <li>Cada proyecto del portfolio tiene enlace público</li>
+                <li>Experiencia con clientes en Argentina</li>
+                <li>Entrega documentada y soporte después del lanzamiento</li>
+                <li>Respuesta en menos de 24 horas</li>
+              </ul>
+              <a href="#contacto" class="btn btn--primary">Trabajemos juntos</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICIOS -->
+      <section class="section services" id="servicios">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__tag">Servicios</span>
+            <h2 class="section__title">¿Qué necesitás resolver?</h2>
+            <p class="section__desc">
+              Elegí según lo que necesitás. Entrega real, código mantenible
+              y publicación incluida.
+            </p>
+          </div>
+          <div class="services__grid">
+            <article class="service-card service-card--highlight">
+              <div class="service-card__icon">🤖</div>
+              <h3 class="service-card__title">Automatización con IA</h3>
+              <p class="service-card__desc">
+                ¿Perdés horas en tareas repetitivas? Desarrollo agentes y flujos
+                que procesan datos y generan reportes automáticamente. Tengo una
+                herramienta en producción desde diciembre de 2025 que genera informes
+                mensuales de redes sociales automáticamente.
+              </p>
+              <ul class="service-card__list">
+                <li>Reportes automáticos</li>
+                <li>Agentes con IA</li>
+                <li>Python + APIs de IA</li>
+              </ul>
+            </article>
+            <article class="service-card">
+              <div class="service-card__icon">🔷</div>
+              <h3 class="service-card__title">WordPress & Tiendas</h3>
+              <p class="service-card__desc">
+                Sitios listos para que los administres por tu cuenta. WordPress en
+                Hostinger, WooCommerce, temas a medida y un panel simple, sin
+                complicaciones.
+              </p>
+              <ul class="service-card__list">
+                <li>Sitios corporativos</li>
+                <li>Tiendas WooCommerce</li>
+                <li>Mantenimiento mensual</li>
+              </ul>
+            </article>
+            <article class="service-card">
+              <div class="service-card__icon">🌐</div>
+              <h3 class="service-card__title">Landing & E-commerce a medida</h3>
+              <p class="service-card__desc">
+                Páginas de marca y tiendas con diseño propio, MercadoPago integrado
+                y optimizadas para buscadores. De la idea al dominio publicado.
+              </p>
+              <ul class="service-card__list">
+                <li>HTML / CSS / SCSS / PHP</li>
+                <li>MercadoPago</li>
+                <li>SEO y mobile-first</li>
+              </ul>
+            </article>
+            <article class="service-card">
+              <div class="service-card__icon">⚛️</div>
+              <h3 class="service-card__title">Apps web modernas</h3>
+              <p class="service-card__desc">
+                Para proyectos que necesitan más: catálogos con panel, dashboards
+                o sitios con React y Next.js. Rápidos, escalables y bien estructurados.
+              </p>
+              <ul class="service-card__list">
+                <li>React / Next.js</li>
+                <li>Catálogo + panel admin</li>
+                <li>TypeScript</li>
+              </ul>
+            </article>
+            <article class="service-card">
+              <div class="service-card__icon">🚀</div>
+              <h3 class="service-card__title">Publicación & soporte</h3>
+              <p class="service-card__desc">
+                No te entrego solo archivos. Publico en Hostinger, GitHub Pages o
+                Netlify, te explico cómo funciona todo y sigo disponible después del
+                lanzamiento.
+              </p>
+              <ul class="service-card__list">
+                <li>Hostinger / Netlify</li>
+                <li>Dominio y SSL</li>
+                <li>Soporte post-entrega</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROYECTOS -->
+      <section class="section projects" id="proyectos">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__tag">Portfolio</span>
+            <h2 class="section__title">Proyectos destacados</h2>
+            <p class="section__desc">
+              Sitios y herramientas en producción — podés abrirlos y revisarlos ahora mismo.
+            </p>
+          </div>
+          <div class="projects__grid">
+            <article class="project-card project-card--featured">
+              <a href="https://fujeiraretrostore.com/" class="project-card__cover" target="_blank" rel="noopener" aria-label="Ver Fujeira Retro Store">
+                <img src="" data-site="https://fujeiraretrostore.com/" data-local="/images/projects/fujeira.png" alt="Portada Fujeira Retro Store" class="project-card__preview" loading="lazy" />
+                <div class="project-card__image project-card__image--1">
+                  <span class="project-card__featured">⭐ Destacado</span>
+                  <span class="project-card__category">Proyecto propio · E-commerce</span>
+                </div>
+              </a>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Fujeira Retro Store</h3>
+                <p class="project-card__desc">
+                  Mi tienda de remeras de fútbol retro. Diseño, catálogo, checkout
+                  con MercadoPago y backend en PHP — desarrollado de punta a punta.
+                </p>
+                <div class="project-card__tags">
+                  <span>HTML/CSS/SCSS</span>
+                  <span>JavaScript</span>
+                  <span>PHP</span>
+                  <span>MercadoPago</span>
+                </div>
+                <div class="project-card__links">
+                  <a href="https://fujeiraretrostore.com/" class="project-card__link" target="_blank" rel="noopener">Ver sitio →</a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card">
+              <a href="https://elfemeninohub.com/" class="project-card__cover" target="_blank" rel="noopener" aria-label="Ver El Femenino Hub">
+                <img src="" data-site="https://elfemeninohub.com/" data-local="/images/projects/elfemenino.png" alt="Portada El Femenino Hub" class="project-card__preview" loading="lazy" />
+                <div class="project-card__image project-card__image--2">
+                  <span class="project-card__category">Cliente real · Hub</span>
+                </div>
+              </a>
+              <div class="project-card__body">
+                <h3 class="project-card__title">El Femenino Hub</h3>
+                <p class="project-card__desc">
+                  Espacio sobre fútbol femenino argentino: contenido, formación y
+                  consultoría. Diseño temático con dominio propio, actualmente en línea.
+                </p>
+                <div class="project-card__tags">
+                  <span>WordPress</span>
+                  <span>HTML/CSS</span>
+                  <span>Responsive</span>
+                  <span>SEO</span>
+                </div>
+                <div class="project-card__links">
+                  <a href="https://elfemeninohub.com/" class="project-card__link" target="_blank" rel="noopener">Ver sitio →</a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card">
+              <a href="https://gasacher.github.io/Velitas-LunaV2/" class="project-card__cover" target="_blank" rel="noopener" aria-label="Ver Velitas de la Luna">
+                <img src="" data-site="https://gasacher.github.io/Velitas-LunaV2/" data-local="/images/projects/velitas.png" alt="Portada Velitas de la Luna" class="project-card__preview" loading="lazy" />
+                <div class="project-card__image project-card__image--2">
+                  <span class="project-card__category">Cliente real · Landing + Catálogo</span>
+                </div>
+              </a>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Velitas de la Luna</h3>
+                <p class="project-card__desc">
+                  Landing para marca de velas artesanales de Buenos Aires. Catálogo
+                  de productos, rituales e intenciones, formulario de contacto e
+                  integración con WhatsApp e Instagram.
+                </p>
+                <div class="project-card__tags">
+                  <span>HTML/CSS</span>
+                  <span>JavaScript</span>
+                  <span>Landing</span>
+                  <span>Responsive</span>
+                </div>
+                <div class="project-card__links">
+                  <a href="https://gasacher.github.io/Velitas-LunaV2/" class="project-card__link" target="_blank" rel="noopener">Ver sitio →</a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card">
+              <a href="https://gasacher.github.io/hilo/" class="project-card__cover" target="_blank" rel="noopener" aria-label="Ver landing de Hilo">
+                <img src="" data-site="https://gasacher.github.io/hilo/" data-local="/images/projects/hilo.png" alt="Portada Hilo" class="project-card__preview" loading="lazy" />
+                <div class="project-card__image project-card__image--2">
+                  <span class="project-card__category">Cofundadora · En desarrollo</span>
+                </div>
+              </a>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Hilo</h3>
+                <p class="project-card__desc">
+                  Estudio de automatización e IA que cofundo con mi socio — asistentes
+                  inteligentes, workflows y herramientas internas. La landing del
+                  estudio está publicada en GitHub Pages.
+                </p>
+                <div class="project-card__tags">
+                  <span>HTML/CSS</span>
+                  <span>JavaScript</span>
+                  <span>UI/UX</span>
+                  <span>En desarrollo</span>
+                </div>
+                <div class="project-card__links">
+                  <a href="https://gasacher.github.io/hilo/" class="project-card__link" target="_blank" rel="noopener">Ver landing →</a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card">
+              <a href="https://gasacher.github.io/fuzz_equipamientos/" class="project-card__cover" target="_blank" rel="noopener" aria-label="Ver FUZZ Equipamientos">
+                <img src="" data-site="https://gasacher.github.io/fuzz_equipamientos/" data-local="/images/projects/fuzz.png" alt="Portada FUZZ Equipamientos" class="project-card__preview" loading="lazy" />
+                <div class="project-card__image project-card__image--1">
+                  <span class="project-card__category">Cliente real · Catálogo + Panel</span>
+                </div>
+              </a>
+              <div class="project-card__body">
+                <h3 class="project-card__title">FUZZ Equipamientos</h3>
+                <p class="project-card__desc">
+                  Catálogo en línea con panel de administración para gestionar
+                  productos sin depender de terceros. Diseño adaptable y sitio en
+                  producción para una empresa real.
+                </p>
+                <div class="project-card__tags">
+                  <span>TypeScript</span>
+                  <span>Catálogo</span>
+                  <span>Panel admin</span>
+                  <span>Responsive</span>
+                </div>
+                <div class="project-card__links">
+                  <a href="https://gasacher.github.io/fuzz_equipamientos/" class="project-card__link" target="_blank" rel="noopener">Ver sitio →</a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card project-card--featured">
+              <a href="https://gasacher.github.io/cmp-metricas-rrss/" class="project-card__cover" target="_blank" rel="noopener" aria-label="Ver Reportería RRSS">
+                <img src="" data-site="https://gasacher.github.io/cmp-metricas-rrss/" data-local="/images/projects/cmp.png" alt="Portada Reportería RRSS" class="project-card__preview" loading="lazy" />
+                <div class="project-card__image project-card__image--3">
+                  <span class="project-card__featured">⭐ Destacado</span>
+                  <span class="project-card__category">Agente IA · En producción</span>
+                </div>
+              </a>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Reportería RRSS</h3>
+                <p class="project-card__desc">
+                  El cliente sube capturas de LinkedIn, YouTube y Search Console.
+                  El sistema genera el informe mensual completo; después lo revisa,
+                  comenta y exporta los comentarios. En uso desde diciembre de 2025.
+                </p>
+                <div class="project-card__tags">
+                  <span>Cursor / IA</span>
+                  <span>Python</span>
+                  <span>Jinja2</span>
+                  <span>GitHub Pages</span>
+                </div>
+                <div class="project-card__links">
+                  <a href="https://gasacher.github.io/cmp-metricas-rrss/" class="project-card__link" target="_blank" rel="noopener">Ver sitio →</a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card">
+              <a href="https://gasacher.github.io/bleachers/" class="project-card__cover" target="_blank" rel="noopener" aria-label="Ver Bleachers">
+                <img src="" data-site="https://gasacher.github.io/bleachers/" data-local="/images/projects/bleachers.png" alt="Portada Bleachers" class="project-card__preview" loading="lazy" />
+                <div class="project-card__image project-card__image--3">
+                  <span class="project-card__category">Cliente real · Marca</span>
+                </div>
+              </a>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Bleachers</h3>
+                <p class="project-card__desc">
+                  Sitio de marca para una tienda argentina de streetwear teñido a mano.
+                  Identidad visual propia, enfoque mobile-first y catálogo en línea.
+                </p>
+                <div class="project-card__tags">
+                  <span>HTML/CSS</span>
+                  <span>JavaScript</span>
+                  <span>Responsive</span>
+                  <span>SEO</span>
+                </div>
+                <div class="project-card__links">
+                  <a href="https://gasacher.github.io/bleachers/" class="project-card__link" target="_blank" rel="noopener">Ver sitio →</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- HABILIDADES -->
+      <section class="section skills" id="habilidades">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__tag">Stack técnico</span>
+            <h2 class="section__title">Habilidades y herramientas</h2>
+          </div>
+          <div class="skills__grid">
+            <div class="skills__group">
+              <h3 class="skills__group-title">Frontend</h3>
+              <div class="skills__tags">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3 / SCSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">React 19</span>
+                <span class="skill-tag">Next.js 16</span>
+                <span class="skill-tag">Tailwind CSS 4</span>
+              </div>
+            </div>
+            <div class="skills__group">
+              <h3 class="skills__group-title">Backend, CMS & Pagos</h3>
+              <div class="skills__tags">
+                <span class="skill-tag">PHP</span>
+                <span class="skill-tag">WordPress</span>
+                <span class="skill-tag">WooCommerce</span>
+                <span class="skill-tag">MercadoPago</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Jinja2</span>
+              </div>
+            </div>
+            <div class="skills__group">
+              <h3 class="skills__group-title">Herramientas & DevOps</h3>
+              <div class="skills__tags">
+                <span class="skill-tag">Hostinger</span>
+                <span class="skill-tag">Git / GitHub</span>
+                <span class="skill-tag">GitHub Actions</span>
+                <span class="skill-tag">GitHub Pages</span>
+                <span class="skill-tag">Netlify</span>
+                <span class="skill-tag">Vercel</span>
+                <span class="skill-tag">Cursor / VS Code</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESO -->
+      <section class="section process" id="proceso">
+        <div class="container">
+          <div class="section__header">
+            <span class="section__tag">Metodología</span>
+            <h2 class="section__title">Cómo trabajo contigo</h2>
+          </div>
+          <div class="process__steps">
+            <div class="process__step">
+              <div class="process__number">01</div>
+              <h3>Charlamos tu idea</h3>
+              <p>Me contás qué necesitás. Te hago preguntas concretas y te digo si puedo ayudarte, sin compromiso.</p>
+            </div>
+            <div class="process__step">
+              <div class="process__number">02</div>
+              <h3>Presupuesto claro</h3>
+              <p>Te mando alcance, plazos y precio fijo antes de arrancar. Sin sorpresas.</p>
+            </div>
+            <div class="process__step">
+              <div class="process__number">03</div>
+              <h3>Desarrollo por fases</h3>
+              <p>Avanzamos por etapas con revisiones. Ves el progreso y das tu opinión en el camino.</p>
+            </div>
+            <div class="process__step">
+              <div class="process__number">04</div>
+              <h3>Publicamos juntos</h3>
+              <p>Subimos el sitio juntos, te explico cómo administrarlo y sigo disponible si necesitás algo después.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section class="section contact" id="contacto">
+        <div class="container">
+          <div class="contact__wrapper">
+            <div class="contact__info">
+              <span class="section__tag">Contacto</span>
+              <h2 class="section__title">¿Tenés un sitio, una tienda o un proceso para automatizar?</h2>
+              <p>
+                Contame tu proyecto y te respondo en menos de 24 horas con una
+                propuesta de alcance y plazos. La primera consulta es sin cargo.
+              </p>
+              <div class="contact__channels">
+                <a href="mailto:gabrielasacher@gmail.com" class="contact__channel">
+                  <span class="contact__channel-icon">✉️</span>
+                  <div>
+                    <strong>Email</strong>
+                    <span>gabrielasacher@gmail.com</span>
+                  </div>
+                </a>
+                <a href="https://www.workana.com/freelancer/cef71ad9a051fecda2c7a90b82db6977" id="workana-link" class="contact__channel" target="_blank" rel="noopener">
+                  <span class="contact__channel-icon">💼</span>
+                  <div>
+                    <strong>Workana</strong>
+                    <span>Contratáme en Workana</span>
+                  </div>
+                </a>
+                <a href="https://www.linkedin.com/in/gabrielasacher/" class="contact__channel" target="_blank" rel="noopener">
+                  <span class="contact__channel-icon">🔗</span>
+                  <div>
+                    <strong>LinkedIn</strong>
+                    <span>/in/gabrielasacher</span>
+                  </div>
+                </a>
+                <a href="https://github.com/gasacher" class="contact__channel" target="_blank" rel="noopener">
+                  <span class="contact__channel-icon">💻</span>
+                  <div>
+                    <strong>GitHub</strong>
+                    <span>@gasacher</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <form class="contact__form" id="contact-form">
+              <div class="form__honeypot" aria-hidden="true">
+                <label for="_honey">No completar este campo</label>
+                <input type="text" id="_honey" name="_honey" tabindex="-1" autocomplete="off" />
+              </div>
+              <div class="form__group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre" autocomplete="name" required />
+              </div>
+              <div class="form__group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com" autocomplete="email" required />
+              </div>
+              <div class="form__group">
+                <label for="subject">Asunto</label>
+                <input type="text" id="subject" name="subject" placeholder="Tipo de proyecto" required />
+              </div>
+              <div class="form__group">
+                <label for="message">Mensaje</label>
+                <textarea id="message" name="message" rows="5" placeholder="Contame sobre tu proyecto..." required></textarea>
+              </div>
+              <div id="form-status" class="form__status" role="status" aria-live="polite"></div>
+              <button type="submit" class="btn btn--primary btn--full" id="form-submit">Enviar mensaje</button>
+              <p class="form__note">
+                El mensaje llega directo a mi correo. Te respondo en menos de 24 horas.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__content">
+        <div class="footer__brand">
+          <a href="#inicio" class="footer__logo">Gasacher<span>.</span></a>
+          <p>Desarrollo web freelance · Gabriela Sacher · Argentina</p>
+        </div>
+        <div class="footer__links">
+          <a href="#servicios">Servicios</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+        <p class="footer__copy">© 2026 Gabriela Sacher (Gasacher). Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
