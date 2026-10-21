@@ -29,7 +29,7 @@ jobs:
       - run: npm run build
         env:
           GH_PAGES_BASE: /porfolio_gasacher/
-          VITE_CONTACT_EMAIL: gabrielasacher@gmail.com
+          VITE_CONTACT_EMAIL: gabriela.sacher@gmail.com
           VITE_WORKANA_URL: https://www.workana.com/freelancer/cef71ad9a051fecda2c7a90b82db6977
 
       - uses: actions/upload-pages-artifact@v3

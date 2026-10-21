@@ -348,9 +348,9 @@ ul {
   z-index: 1;
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  object-position: center 12%;
+  object-position: center;
   border-radius: var(--radius-lg);
   border: 3px solid rgba(var(--color-primary-rgb), 0.25);
   box-shadow: var(--shadow-card);
@@ -479,7 +479,7 @@ ul {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
   gap: 4rem;
-  align-items: center;
+  align-items: start;
 }
 
 .about__image {
@@ -489,7 +489,7 @@ ul {
 .about__avatar {
   width: 260px;
   max-width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   border-radius: var(--radius-lg);
   background: var(--color-bg-card);
   margin: 0 auto;
@@ -512,16 +512,20 @@ ul {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 8%;
+  object-position: center;
   display: block;
 }
 
-.about__card {
-  position: absolute;
-  bottom: -1rem;
-  right: 0;
+.about__meta {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.about__card {
+  display: flex;
+  align-items: flex-start;
   gap: 0.75rem;
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
@@ -590,10 +594,18 @@ ul {
   background: var(--color-gradient);
 }
 
-/* ---- Services ---- */
-.services {
+.about__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.about,
+.contact {
   background: var(--color-bg-elevated);
 }
+
+/* ---- Services ---- */
 
 .services__grid {
   display: grid;
@@ -765,6 +777,51 @@ ul {
     linear-gradient(135deg, #1a2e22 0%, #2d4a38 50%, #3f6b52 100%);
 }
 
+.project-card__cover--placeholder {
+  cursor: pointer;
+}
+
+div.project-card__cover--placeholder {
+  cursor: default;
+}
+
+.project-card__cover--placeholder .project-card__image {
+  justify-content: flex-end;
+  gap: 0.85rem;
+}
+
+.project-card__cover--placeholder .project-card__image--2 {
+  background: linear-gradient(145deg, #042f2e 0%, #0f766e 52%, #5eead4 100%);
+}
+
+.project-card__cover--placeholder .project-card__image--3 {
+  background: linear-gradient(150deg, #052e16 0%, #166534 48%, #4ade80 100%);
+}
+
+.project-card__cover--placeholder .project-card__image--4 {
+  background: linear-gradient(155deg, #14532d 0%, #15803d 46%, #86efac 100%);
+}
+
+.project-card__cover--placeholder .project-card__image--5 {
+  background: linear-gradient(150deg, #1c1917 0%, #3f6212 52%, #a3e635 100%);
+}
+
+.project-card__cover--placeholder .project-card__image--6 {
+  background: linear-gradient(160deg, #0a0f0c 0%, #1a2e22 55%, #3f6b52 100%);
+}
+
+.project-card__placeholder-name {
+  margin-top: auto;
+  max-width: 16rem;
+  color: #f4fdf7;
+  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  text-wrap: balance;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+}
+
 .project-card__category {
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(8px);
@@ -843,6 +900,12 @@ ul {
   font-weight: 500;
 }
 
+.project-card__demo {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
 /* ---- Skills ---- */
 .skills__grid {
   display: grid;
@@ -873,6 +936,14 @@ ul {
   font-size: 0.85rem;
   font-weight: 500;
   transition: var(--transition);
+}
+
+.skills__tools {
+  margin-top: 2.5rem;
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 .skill-tag:hover {
@@ -978,6 +1049,30 @@ ul {
 .contact__channel span {
   font-size: 0.85rem;
   color: var(--color-text-muted);
+}
+
+.contact__channel--cv:hover {
+  transform: none;
+  border-color: var(--color-border);
+}
+
+.contact__cv-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.9rem;
+  margin-top: 0.15rem;
+}
+
+.contact__cv-links a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary-light);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.contact__cv-links a:hover {
+  color: var(--color-accent);
 }
 
 .contact__form {
@@ -1158,7 +1253,8 @@ ul {
 
 .footer__links {
   display: flex;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
   justify-content: flex-end;
 }
 
@@ -1207,13 +1303,8 @@ ul {
 
   .about__avatar {
     width: 220px;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 1 / 1;
     height: auto;
-  }
-
-  .about__card {
-    right: 50%;
-    transform: translateX(50%);
   }
 }
 

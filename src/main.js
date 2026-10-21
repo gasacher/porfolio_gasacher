@@ -116,7 +116,7 @@ if (workanaLink && workanaUrl) {
 const contactForm = document.getElementById('contact-form');
 const formSubmitBtn = document.getElementById('form-submit');
 const formStatus = document.getElementById('form-status');
-const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || 'gabrielasacher@gmail.com';
+const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || 'gabriela.sacher@gmail.com';
 const formEndpoint = `https://formsubmit.co/ajax/${encodeURIComponent(contactEmail)}`;
 
 contactForm.addEventListener('submit', async (e) => {
