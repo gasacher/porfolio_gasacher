@@ -31,7 +31,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/src/styles/main.css" />
@@ -59,6 +59,7 @@
           <li><a href="#sobre-mi" class="nav__link">Sobre mí</a></li>
           <li><a href="#servicios" class="nav__link">Servicios</a></li>
           <li><a href="#proceso" class="nav__link">Proceso</a></li>
+          <li><button type="button" class="nav__link arcade-nav" data-arcade-open>Arcade</button></li>
           <li><a href="#contacto" class="nav__link nav__link--cta">Contactar</a></li>
         </ul>
       </nav>
@@ -86,6 +87,7 @@
                 <a href="#contacto" class="btn btn--primary">Hablemos de tu proyecto</a>
                 <a href="#proyectos" class="btn btn--outline">Ver proyectos</a>
                 <a href="./assets/cv/CV_Gabriela_Sacher_ES.pdf" class="btn btn--outline" download="CV_Gabriela_Sacher_ES.pdf">Descargar CV</a>
+                <button type="button" class="arcade-launch" data-arcade-open>Modo arcade</button>
               </div>
               <div class="hero__stats">
                 <div class="hero__stat">
@@ -145,7 +147,7 @@
             </p>
           </div>
           <div class="projects__grid">
-            <article class="project-card project-card--featured">
+            <article class="project-card project-card--featured" id="proyecto-fujeira">
               <a href="https://fujeiraretrostore.com/" class="project-card__cover" target="_blank" rel="noopener" aria-label="Ver Fujeira Retro Store">
                 <img src="" data-site="https://fujeiraretrostore.com/" data-local="images/projects/fujeira.png" alt="Portada de Fujeira Retro Store" class="project-card__preview" loading="lazy" />
                 <div class="project-card__image project-card__image--1">
@@ -172,7 +174,7 @@
               </div>
             </article>
 
-            <article class="project-card project-card--featured">
+            <article class="project-card project-card--featured" id="proyecto-fuzz">
               <a href="https://gasacher.github.io/fuzz_equipamientos/" class="project-card__cover project-card__cover--placeholder" target="_blank" rel="noopener" aria-label="Ver demo de FUZZ Equipamientos">
                 <div class="project-card__image project-card__image--2">
                   <span class="project-card__featured">⭐ Destacado</span>
@@ -197,7 +199,7 @@
               </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" id="proyecto-hilo">
               <a href="https://gasacher.github.io/hilo/" class="project-card__cover project-card__cover--placeholder" target="_blank" rel="noopener" aria-label="Ver adelanto de Hilo">
                 <div class="project-card__image project-card__image--3">
                   <span class="project-card__placeholder-name">Hilo</span>
@@ -220,7 +222,7 @@
               </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" id="proyecto-elfemenino">
               <a href="https://elfemeninohub.com/" class="project-card__cover project-card__cover--placeholder" target="_blank" rel="noopener" aria-label="Ver El Femenino Hub">
                 <div class="project-card__image project-card__image--4">
                   <span class="project-card__placeholder-name">El Femenino Hub</span>
@@ -244,7 +246,7 @@
               </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" id="proyecto-velitas">
               <a href="https://gasacher.github.io/Velitas-LunaV2/" class="project-card__cover project-card__cover--placeholder" target="_blank" rel="noopener" aria-label="Ver la versión anterior de Velitas de la Luna">
                 <div class="project-card__image project-card__image--5">
                   <span class="project-card__placeholder-name">Velitas de la Luna</span>
@@ -268,7 +270,7 @@
               </div>
             </article>
 
-            <article class="project-card">
+            <article class="project-card" id="proyecto-reporteria">
               <div class="project-card__cover project-card__cover--placeholder">
                 <div class="project-card__image project-card__image--6">
                   <span class="project-card__placeholder-name">Reportería automatizada con IA</span>
@@ -623,6 +625,55 @@
         <p class="footer__copy">© 2026 Gabriela Sacher. Todos los derechos reservados.</p>
       </div>
     </footer>
+
+    <div class="arcade" id="arcade" hidden>
+      <div class="arcade__crt" role="dialog" aria-modal="true" aria-labelledby="arcade-title">
+        <div class="arcade__scanlines" aria-hidden="true"></div>
+        <div class="arcade__bezel">
+          <div class="arcade__hud">
+            <span>GASACHER</span>
+            <span>1 PLAYER</span>
+            <button type="button" class="arcade__exit" id="arcade-exit">Salir</button>
+          </div>
+          <div class="arcade__screen">
+            <div class="arcade__view" data-view="title">
+              <p class="arcade__kicker">Buenos Aires · 2026</p>
+              <h2 class="arcade__title" id="arcade-title">Portfolio Quest</h2>
+              <div class="arcade__avatar-wrap">
+                <img class="arcade__avatar" src="./images/profile.jpg" alt="" width="112" height="112" />
+              </div>
+              <p class="arcade__player">Gabriela Sacher</p>
+              <p class="arcade__blink">Presioná start</p>
+              <button type="button" class="arcade__start" id="arcade-start">Start</button>
+            </div>
+            <div class="arcade__view" data-view="menu" hidden>
+              <p class="arcade__kicker">Elegí un mundo</p>
+              <div class="arcade__menu">
+                <button type="button" data-arcade-view="stages">01 Proyectos</button>
+                <button type="button" data-arcade-go="#sobre-mi">02 Sobre mí</button>
+                <button type="button" data-arcade-go="#servicios">03 Servicios</button>
+                <button type="button" data-arcade-go="#contacto">04 Contacto</button>
+                <a href="./assets/cv/CV_Gabriela_Sacher_ES.pdf" download="CV_Gabriela_Sacher_ES.pdf">05 Descargar CV</a>
+              </div>
+              <button type="button" class="arcade__back" data-arcade-view="title">Atrás</button>
+            </div>
+            <div class="arcade__view" data-view="stages" hidden>
+              <p class="arcade__kicker">Niveles</p>
+              <div class="arcade__menu arcade__menu--stages">
+                <button type="button" data-arcade-go="#proyecto-fujeira">Fujeira Retro Store <span>En producción</span></button>
+                <button type="button" data-arcade-go="#proyecto-fuzz">FUZZ Equipamientos <span>En desarrollo</span></button>
+                <button type="button" data-arcade-go="#proyecto-hilo">Hilo <span>En desarrollo</span></button>
+                <button type="button" data-arcade-go="#proyecto-elfemenino">El Femenino Hub <span>Publicado</span></button>
+                <button type="button" data-arcade-go="#proyecto-velitas">Velitas de la Luna <span>En desarrollo</span></button>
+                <button type="button" data-arcade-go="#proyecto-reporteria">Reportería con IA <span>Demo a pedido</span></button>
+              </div>
+              <button type="button" class="arcade__back" data-arcade-view="menu">Atrás</button>
+            </div>
+          </div>
+          <p class="arcade__hint">Flechas para moverte · Enter para entrar · Esc para salir</p>
+        </div>
+      </div>
+    </div>
 
     <script type="module" src="/src/main.js"></script>
   </body>
