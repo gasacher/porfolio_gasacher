@@ -4,6 +4,8 @@
 
 Sitio publicado: [gasacher.github.io/porfolio_gasacher](https://gasacher.github.io/porfolio_gasacher/)
 
+El modo arcade es una entrada retro opcional. Se abre con el botón del inicio o agregando `#arcade` a la URL. El portfolio normal sigue siendo la puerta de entrada.
+
 Stack: Vite y JavaScript, con HTML y CSS. El formulario de contacto manda los mensajes con FormSubmit a `VITE_CONTACT_EMAIL`.
 
 ## Desarrollo local

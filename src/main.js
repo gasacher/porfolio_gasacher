@@ -201,3 +201,99 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+// Modo arcade: entrada retro. El portfolio normal sigue siendo la puerta de entrada.
+const arcade = document.getElementById('arcade');
+const arcadeExit = document.getElementById('arcade-exit');
+const arcadeStart = document.getElementById('arcade-start');
+let arcadeReturnFocus = null;
+
+function arcadeView(name) {
+  arcade.querySelectorAll('.arcade__view').forEach((view) => {
+    view.hidden = view.dataset.view !== name;
+  });
+  const current = arcade.querySelector(`.arcade__view[data-view="${name}"]`);
+  current?.querySelector('button, a')?.focus();
+}
+
+function openArcade(updateHash = true) {
+  if (!arcade.hidden) return;
+  arcadeReturnFocus = document.activeElement;
+  arcade.hidden = false;
+  document.body.classList.add('arcade-open');
+  arcadeView('title');
+  if (updateHash && location.hash !== '#arcade') {
+    history.pushState({ arcade: true }, '', '#arcade');
+  }
+}
+
+function closeArcade(updateHash = true) {
+  if (arcade.hidden) return;
+  arcade.hidden = true;
+  document.body.classList.remove('arcade-open');
+  if (updateHash && location.hash === '#arcade') {
+    history.pushState(null, '', `${location.pathname}${location.search}`);
+  }
+  if (arcadeReturnFocus instanceof HTMLElement) arcadeReturnFocus.focus();
+}
+
+function leaveArcade(selector) {
+  closeArcade();
+  document.querySelector(selector)?.scrollIntoView({
+    behavior: prefersReducedMotion ? 'auto' : 'smooth',
+    block: 'start',
+  });
+}
+
+document.querySelectorAll('[data-arcade-open]').forEach((button) => {
+  button.addEventListener('click', () => {
+    setMenuOpen(false);
+    openArcade();
+  });
+});
+
+arcadeExit.addEventListener('click', () => closeArcade());
+arcadeStart.addEventListener('click', () => arcadeView('menu'));
+
+arcade.addEventListener('click', (event) => {
+  if (event.target === arcade) {
+    closeArcade();
+    return;
+  }
+  const viewButton = event.target.closest('[data-arcade-view]');
+  if (viewButton) {
+    arcadeView(viewButton.dataset.arcadeView);
+    return;
+  }
+  const go = event.target.closest('[data-arcade-go]');
+  if (go) leaveArcade(go.dataset.arcadeGo);
+});
+
+document.addEventListener('keydown', (event) => {
+  if (arcade.hidden) return;
+  if (event.key === 'Escape') {
+    event.preventDefault();
+    closeArcade();
+    return;
+  }
+  if (event.key !== 'ArrowDown' && event.key !== 'ArrowUp') return;
+  const current = arcade.querySelector('.arcade__view:not([hidden])');
+  const items = [...current.querySelectorAll('button, a')];
+  if (!items.length) return;
+  const index = items.indexOf(document.activeElement);
+  event.preventDefault();
+  const next = event.key === 'ArrowDown' ? index + 1 : index - 1;
+  items[(next + items.length) % items.length].focus();
+});
+
+window.addEventListener('hashchange', () => {
+  if (location.hash === '#arcade') openArcade(false);
+  else closeArcade(false);
+});
+
+window.addEventListener('popstate', () => {
+  if (location.hash === '#arcade') openArcade(false);
+  else closeArcade(false);
+});
+
+if (location.hash === '#arcade') openArcade(false);
